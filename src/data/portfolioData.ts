@@ -1,0 +1,1038 @@
+import type { PortfolioData } from '../types/portfolio'
+
+export const portfolioData: PortfolioData = {
+  site: {
+    name: 'TRI DOAN',
+    role: 'Senior Software Engineer',
+    futureRole: 'Future Solution Architect',
+    location: 'Ho Chi Minh City, Vietnam',
+    email: 'w.d****tri@gmail.com.vn',
+    phone: '+84 **** *563',
+    resumeHref: '/resume/DoanQuocTri-Software-Engineer-Jan-2024_2.docx',
+    footerNote: '© 2026 Built with Codex precision.',
+    socials: [
+      { label: 'GitHub', href: 'https://github.com/w.d****tri' },
+      { label: 'LinkedIn', href: 'https://www.linkedin.com/in/w.d****tri' },
+      { label: 'Email', href: 'mailto:w.d****tri@gmail.com.vn' },
+    ],
+    accentPresets: [
+      {
+        id: 'lagoon',
+        label: 'Lagoon',
+        description: 'Green-blue gradient close to the current portfolio mood.',
+        start: '#54d8b1',
+        end: '#00b8ff',
+        glow: 'rgba(0, 184, 255, 0.18)',
+        soft: 'rgba(84, 216, 177, 0.14)',
+      },
+      {
+        id: 'sunrise',
+        label: 'Sunrise',
+        description: 'Warm coral to gold for softer, more welcoming highlights.',
+        start: '#ff9a62',
+        end: '#ffd36f',
+        glow: 'rgba(255, 170, 109, 0.22)',
+        soft: 'rgba(255, 154, 98, 0.14)',
+      },
+      {
+        id: 'aurora',
+        label: 'Aurora',
+        description: 'Teal to violet for a more architectural and futuristic tone.',
+        start: '#32d8c3',
+        end: '#7f8fff',
+        glow: 'rgba(127, 143, 255, 0.2)',
+        soft: 'rgba(50, 216, 195, 0.14)',
+      },
+      {
+        id: 'ember',
+        label: 'Ember',
+        description: 'Amber to rose for more contrast in cards and CTAs.',
+        start: '#ffae57',
+        end: '#ff7b8e',
+        glow: 'rgba(255, 123, 142, 0.22)',
+        soft: 'rgba(255, 174, 87, 0.14)',
+      },
+    ],
+    raisedSurfacePresets: [
+      {
+        id: 'base',
+        label: 'Base',
+        description: 'Current neutral raised surface close to the original portfolio cards.',
+        light: '#e0e5ec',
+        dark: '#1a1c20',
+      },
+      {
+        id: 'highlight',
+        label: 'Highlight',
+        description: 'Reference raised card tone from the export using surface-container-highest.',
+        light: '#d2e5f7',
+        dark: '#20242a',
+      },
+      {
+        id: 'soft',
+        label: 'Soft',
+        description: 'A gentle blue-tinted raised surface between base and highlight.',
+        light: '#e4effc',
+        dark: '#1d2229',
+      },
+      {
+        id: 'bright',
+        label: 'Bright',
+        description: 'A brighter porcelain-like raised card surface.',
+        light: '#f6f9ff',
+        dark: '#232831',
+      },
+    ],
+    insetSurfacePresets: [
+      {
+        id: 'frost',
+        label: 'Frost',
+        description: 'Reference inset surface from the export, with a soft blue cast.',
+        light: '#ecf4fe',
+        dark: '#171d25',
+      },
+      {
+        id: 'cloud',
+        label: 'Cloud',
+        description: 'A lighter inset panel that feels closer to white porcelain.',
+        light: '#f2f7fe',
+        dark: '#1b2129',
+      },
+      {
+        id: 'soft',
+        label: 'Soft',
+        description: 'Balanced inset tone for featured cards that need a little more depth.',
+        light: '#e8f1fb',
+        dark: '#161c23',
+      },
+      {
+        id: 'mist',
+        label: 'Mist',
+        description: 'Slightly denser blue-grey for stronger inset separation.',
+        light: '#e4eef9',
+        dark: '#141920',
+      },
+      {
+        id: 'slate',
+        label: 'Slate',
+        description: 'A more neutral inset tone for quieter panels and chips.',
+        light: '#dde8f4',
+        dark: '#20262e',
+      },
+    ],
+    customizationDefaults: {
+      accentPresetId: 'aurora',
+      raisedSurfacePresetId: 'base',
+      insetSurfacePresetId: 'cloud',
+      availabilityId: 'not_available',
+      fontPreset: 'modern',
+      navbarMode: 'static',
+      navbarStyle: 'shell',
+      borderRadius: 18,
+    },
+    availabilityOptions: [
+      {
+        id: 'available',
+        label: 'Available for new positions',
+        shortLabel: 'Available now',
+        description: 'Ready to discuss new roles and product challenges.',
+        tone: 'positive',
+      },
+      {
+        id: 'open_to_discuss',
+        label: 'Open to discuss the right opportunity',
+        shortLabel: 'Open to discuss',
+        description: 'Selective, but happy to talk if the fit is strong.',
+        tone: 'cool',
+      },
+      {
+        id: 'considering',
+        label: 'Warmly considering future moves',
+        shortLabel: 'Considering',
+        description: 'Not rushing, but exploring the next strong step carefully.',
+        tone: 'warm',
+      },
+      {
+        id: 'not_available',
+        label: 'Not available for a new position right now',
+        shortLabel: 'Not available',
+        description: 'Best for networking, knowledge sharing, or future check-ins.',
+        tone: 'muted',
+      },
+    ],
+    navbarStyles: [
+      {
+        id: 'shell',
+        label: 'Shell',
+        description: 'Centered rounded shell with the current neumorphic portfolio framing.',
+      },
+      {
+        id: 'full_glass_top',
+        label: 'Full Glass Top',
+        description: 'Full-width glass bar inspired by the detailed Stitch export header.',
+      },
+      {
+        id: 'full_raised_top',
+        label: 'Full Raised Top',
+        description: 'Full-width solid raised band with a stronger card-like presence.',
+      },
+      {
+        id: 'minimal_line',
+        label: 'Minimal Line',
+        description: 'A lighter full-width top bar with simpler text navigation and active underline.',
+      },
+    ],
+  },
+  hero: {
+    eyebrow: 'Neumorphic Portfolio',
+    title: [
+      { text: 'Hello, I\'m ' },
+      { text: 'Tri Doan', accent: true },
+      { text: ', Crafting ' },
+      { text: 'Reliable ', accent: true },
+      { text: 'Systems.' },
+    ],
+    subtitle: [
+      { text: 'Software developer focused on ' },
+      { text: 'backend depth', accent: true },
+      { text: ', resilient delivery, and polished practical architecture.' },
+    ],
+    description: [
+      { text: 'This homepage is structured to grow from a good software engineer resume into a future-facing ' },
+      { text: 'Solution Architect', accent: true },
+      { text: ' profile.' },
+    ],
+    primaryCta: { label: 'View Portfolio', href: '#experience' },
+    secondaryCta: {
+      label: 'Download Resume',
+      href: '/resume/DoanQuocTri-Software-Engineer-Jan-2024_2.docx',
+    },
+    profileImage: {
+      src: '/media/profile.png',
+      alt: 'Professional portrait placeholder for Tri Doan in a dark moody studio environment.',
+    },
+    futureProfileImage: {
+      src: '/media/future-profile.jpg',
+      alt: 'Professional portrait placeholder for Tri Doan in a dark moody studio environment.',
+    },
+    floatingKeywords: ['Spring Boot', 'React', 'System Design', 'Testing', 'Delivery'],
+    metrics: [
+      { value: '7+', label: 'years building business-critical software' },
+      { value: '8', label: 'developers led on key enterprise delivery' },
+      { value: '5+', label: 'major product domains across healthcare and logistics' },
+    ],
+  },
+  summary: {
+    eyebrow: 'Profile',
+    title: [
+      { text: 'Software Engineer today, ' },
+      { text: 'Solution Architect trajectory', accent: true },
+      { text: ' tomorrow.' },
+    ],
+    description: [
+      { text: 'A single-page portfolio that presents real engineering strengths while leaving room for deeper architecture storytelling later.' },
+    ],
+    paragraphs: [
+      [
+        { text: 'I enjoy shaping ' },
+        { text: 'maintainable backend services', accent: true },
+        { text: ', clear APIs, and responsive interfaces that help teams ship with less friction and more confidence.' },
+      ],
+      [
+        { text: 'My work usually sits at the intersection of ' },
+        { text: 'delivery ownership', accent: true },
+        { text: ', system quality, and product collaboration with designers, QA, and stakeholders.' },
+      ],
+    ],
+    focusAreas: [
+      { label: 'Java', skillSlug: 'java' },
+      { label: 'Spring Boot', skillSlug: 'spring-boot' },
+      { label: 'C#', skillSlug: 'c-sharp' },
+      { label: 'ASP.NET Core', skillSlug: 'aspnet-core' },
+      { label: 'React', skillSlug: 'react' },
+      { label: 'Architecture-ready docs' },
+    ],
+    cards: [
+      {
+        label: 'Current strength',
+        value: 'Full-stack delivery',
+        detail: 'From database migration and API design to responsive UI and release support.',
+        raisedSurface: 'highlight',
+        insetSurface: 'frost',
+        accentPreset: 'sunrise',
+      },
+      {
+        label: 'Architect path',
+        value: 'System thinking',
+        detail: 'Growing toward higher-level solution design, scalability decisions, and technical leadership.',
+      },
+      {
+        label: 'Working style',
+        value: 'Calm and production-minded',
+        detail: 'Focused on reusable code, clean UI structure, and changes that scale with future updates.',
+      },
+    ],
+    futureStatement: [
+      { text: 'The site content is intentionally organized so new achievements, architecture case studies, and technical write-ups can be added without changing the design language.' },
+    ],
+  },
+  experience: [
+    {
+      role: 'Senior Engineer',
+      company: 'TMA Solutions',
+      period: 'May 2018 - Present',
+      location: 'Ho Chi Minh City, Vietnam',
+      raisedSurface: 'base',
+      insetSurface: 'frost',
+      accentPreset: 'lagoon',
+      highlights: [
+        [
+          { text: 'Led a team of 8 developers and helped improve ' },
+          { text: 'backend performance by 30%', accent: true },
+          { text: ' on a critical enterprise document platform.' },
+        ],
+        [
+          { text: 'Worked across Agile planning, code reviews, deployment support, and sustainable engineering standards for long-running products.' },
+        ],
+        [
+          { text: 'Built automated tests and quality practices that helped reduce ' },
+          { text: 'post-release bugs by 15%', accent: true },
+          { text: '.' },
+        ],
+      ],
+      tools: [
+        { label: 'Java', skillSlug: 'java' },
+        { label: 'Spring Boot', skillSlug: 'spring-boot' },
+        { label: 'React', skillSlug: 'react' },
+        { label: 'MySQL', skillSlug: 'sql' },
+        { label: 'MongoDB' },
+        { label: 'Jenkins' },
+      ],
+    },
+    {
+      role: 'Full-stack Product Delivery',
+      company: 'International Client Programs',
+      period: '2019 - Present',
+      location: 'Ireland, Belgium, Canada',
+      raisedSurface: 'highlight',
+      insetSurface: 'soft',
+      accentPreset: 'sunrise',
+      highlights: [
+        [
+          { text: 'Implemented features end-to-end across ' },
+          { text: 'database, backend, and frontend', accent: true },
+          { text: ' for healthcare, logistics, and GIS products.' },
+        ],
+        [
+          { text: 'Collaborated directly with clients to clarify requirements, align feature direction, and reduce delivery risk.' },
+        ],
+        [
+          { text: 'Contributed to architecture improvements, legacy modernization, and more scalable deployment patterns over time.' },
+        ],
+      ],
+      tools: [
+        { label: 'C#', skillSlug: 'c-sharp' },
+        { label: 'ASP.NET Core', skillSlug: 'aspnet-core' },
+        { label: 'PostgreSQL', skillSlug: 'sql' },
+        { label: 'React Hooks', skillSlug: 'react' },
+        { label: 'Docker' },
+        { label: 'RabbitMQ' },
+      ],
+    },
+    {
+      role: 'Engineering Quality and Team Practice',
+      company: 'Cross-functional Delivery',
+      period: 'Ongoing',
+      location: 'Agile product environments',
+      raisedSurface: 'soft',
+      insetSurface: 'slate',
+      accentPreset: 'aurora',
+      highlights: [
+        [
+          { text: 'Applied ' },
+          { text: 'SOLID principles', accent: true },
+          { text: ', design patterns, and practical reviews to keep implementations maintainable.' },
+        ],
+        [
+          { text: 'Supported release confidence through testing frameworks, issue triage, documentation, and clear collaboration.' },
+        ],
+        [
+          { text: 'Built habits that translate well into future ' },
+          { text: 'solution architecture', accent: true },
+          { text: ' responsibilities: structure, clarity, and tradeoff awareness.' },
+        ],
+      ],
+      tools: [
+        { label: 'JUnit' },
+        { label: 'NUnit' },
+        { label: 'xUnit' },
+        { label: 'Git' },
+        { label: 'Jira' },
+        { label: 'Confluence' },
+      ],
+    },
+  ],
+  skills: [
+    {
+      label: 'Backend Engineering',
+      icon: 'dns',
+      raisedSurface: 'highlight',
+      insetSurface: 'frost',
+      accentPreset: 'lagoon',
+      items: [
+        { label: 'Java', skillSlug: 'java' },
+        { label: 'Spring Boot', skillSlug: 'spring-boot' },
+        { label: 'Hibernate' },
+        { label: 'C#', skillSlug: 'c-sharp' },
+        { label: 'ASP.NET Core', skillSlug: 'aspnet-core' },
+        { label: 'REST APIs' },
+      ],
+      proficiency: [
+        { text: 'Primary strength for ' },
+        { text: 'business logic', accent: true },
+        { text: ', service layers, API contracts, and scalable implementation.' },
+      ],
+      accentVariant: 'emerald',
+    },
+    {
+      label: 'Frontend Delivery',
+      icon: 'web',
+      raisedSurface: 'soft',
+      insetSurface: 'soft',
+      accentPreset: 'aurora',
+      items: [
+        { label: 'React', skillSlug: 'react' },
+        { label: 'TypeScript' },
+        { label: 'Responsive UI' },
+        { label: 'Hooks', skillSlug: 'react' },
+        { label: 'Tailwind CSS' },
+      ],
+      proficiency: [
+        { text: 'Comfortable turning workflow-heavy requirements into ' },
+        { text: 'clear user interfaces', accent: true },
+        { text: ' that still feel polished.' },
+      ],
+      accentVariant: 'sky',
+    },
+    {
+      label: 'Data and Persistence',
+      icon: 'database',
+      items: [
+        { label: 'MySQL', skillSlug: 'sql' },
+        { label: 'PostgreSQL', skillSlug: 'sql' },
+        { label: 'SQL Server', skillSlug: 'sql' },
+        { label: 'MongoDB' },
+        { label: 'Query Optimization', skillSlug: 'sql' },
+      ],
+      proficiency: [
+        { text: 'Strong with schemas, integrations, migrations, and ' },
+        { text: 'performance-aware data access', accent: true },
+        { text: '.' },
+      ],
+      accentVariant: 'violet',
+    },
+    {
+      label: 'Delivery Quality',
+      icon: 'verified',
+      items: [
+        { label: 'JUnit' },
+        { label: 'NUnit' },
+        { label: 'xUnit' },
+        { label: 'Git' },
+        { label: 'Docker' },
+        { label: 'Jenkins' },
+      ],
+      proficiency: [
+        { text: 'Focused on ' },
+        { text: 'steady releases', accent: true },
+        { text: ', testing discipline, and team collaboration that survives real production pressure.' },
+      ],
+      accentVariant: 'amber',
+    },
+  ],
+  coreTechnologies: {
+    eyebrow: 'Core Technologies',
+    title: [
+      { text: 'Technology notes designed to grow into ' },
+      { text: 'living documentation', accent: true },
+      { text: '.' },
+    ],
+    description: [
+      { text: 'Each card can become a deeper knowledge page later. For now, the carousel keeps the homepage compact while still exposing the stack I reach for most.' },
+    ],
+    items: [
+      {
+        label: 'Java',
+        icon: 'coffee',
+        raisedSurface: 'highlight',
+        insetSurface: 'frost',
+        accentPreset: 'lagoon',
+        summary: [{ text: 'Enterprise service design, maintainable domain logic, and long-lived product code.' }],
+        emphasis: 'Core backend language',
+        tags: ['Spring', 'JPA', 'Testing'],
+        skillSlug: 'java',
+      },
+      {
+        label: 'Spring Boot',
+        icon: 'lan',
+        summary: [{ text: 'Building APIs, business workflows, integrations, and production-ready backend services.' }],
+        emphasis: 'Main service framework',
+        tags: ['REST', 'Security', 'Batch'],
+        skillSlug: 'spring-boot',
+      },
+      {
+        label: 'C#',
+        icon: 'code',
+        summary: [{ text: 'Product delivery across APIs, GIS systems, and enterprise applications with clean layering.' }],
+        emphasis: 'Strong cross-project depth',
+        tags: ['LINQ', 'Async', 'Testing'],
+        skillSlug: 'c-sharp',
+      },
+      {
+        label: 'ASP.NET Core',
+        icon: 'hub',
+        summary: [{ text: 'Modern web backends, service boundaries, and pragmatic platform work for real clients.' }],
+        emphasis: 'Modern .NET delivery',
+        tags: ['Web API', 'EF Core', 'Auth'],
+        skillSlug: 'aspnet-core',
+      },
+      {
+        label: 'React',
+        icon: 'deployed_code',
+        raisedSurface: 'soft',
+        insetSurface: 'soft',
+        accentPreset: 'aurora',
+        summary: [{ text: 'Responsive frontends, interactive views, and practical component systems for product teams.' }],
+        emphasis: 'Frontend implementation',
+        tags: ['Hooks', 'UX', 'State'],
+        skillSlug: 'react',
+      },
+      {
+        label: 'SQL',
+        icon: 'storage',
+        summary: [{ text: 'Schema design, query performance, persistence strategy, and system-friendly data modeling.' }],
+        emphasis: 'Data-heavy product work',
+        tags: ['PostgreSQL', 'MySQL', 'Optimization'],
+        skillSlug: 'sql',
+      },
+      {
+        label: 'System Design',
+        icon: 'account_tree',
+        summary: [{ text: 'Architecture thinking, integration tradeoffs, and preparing implementation details for future scale.' }],
+        emphasis: 'Solution architect direction',
+        tags: ['Boundaries', 'Scalability', 'Docs'],
+      },
+      {
+        label: 'Testing',
+        icon: 'rule',
+        summary: [{ text: 'Building confidence with automation, repeatable checks, and release-minded quality habits.' }],
+        emphasis: 'Release stability',
+        tags: ['JUnit', 'xUnit', 'Regression'],
+      },
+    ],
+  },
+  technicalKnowledge: {
+    eyebrow: 'Technical Knowledge',
+    title: [
+      { text: 'A knowledge structure ready for future ' },
+      { text: 'technical documentation', accent: true },
+      { text: ' and architecture notes.' },
+    ],
+    description: [
+      { text: 'This section mirrors a concise capability map, making the homepage easier to scan for engineering depth, technical range, and future architecture growth.' },
+    ],
+    categories: [
+      {
+        label: 'Programming Languages',
+        icon: 'terminal',
+        raisedSurface: 'highlight',
+        insetSurface: 'frost',
+        accentPreset: 'lagoon',
+        summary: [
+          { text: 'Core implementation languages used across product delivery, service layers, and frontend integration.' },
+        ],
+        items: [
+          { label: 'JavaScript' },
+          { label: 'Java', skillSlug: 'java' },
+          { label: 'C#', skillSlug: 'c-sharp' },
+        ],
+        accentVariant: 'emerald',
+      },
+      {
+        label: 'Web Development',
+        icon: 'public',
+        raisedSurface: 'soft',
+        insetSurface: 'soft',
+        accentPreset: 'aurora',
+        summary: [
+          { text: 'Building frontend and backend features together with API-first thinking and maintainable flow design.' },
+        ],
+        items: [
+          { label: 'Frontend development' },
+          { label: 'Backend development' },
+          { label: 'REST APIs' },
+        ],
+        accentVariant: 'sky',
+      },
+      {
+        label: 'Database Systems',
+        icon: 'schema',
+        summary: [
+          { text: 'Working with storage design, persistence strategy, and practical modeling decisions.' },
+        ],
+        items: [
+          { label: 'SQL', skillSlug: 'sql' },
+          { label: 'NoSQL' },
+          { label: 'Data modeling' },
+        ],
+        accentVariant: 'violet',
+      },
+      {
+        label: 'Software Engineering',
+        icon: 'construction',
+        summary: [
+          { text: 'Using maintainable engineering practices that support quality, changeability, and long-lived systems.' },
+        ],
+        items: [
+          { label: 'OOP' },
+          { label: 'Design patterns' },
+          { label: 'Testing' },
+        ],
+        accentVariant: 'amber',
+      },
+      {
+        label: 'Modern Technologies',
+        icon: 'deployed_code_update',
+        summary: [
+          { text: 'Exploring service decomposition and architecture-friendly delivery patterns for evolving products.' },
+        ],
+        items: [{ label: 'Microservices' }],
+        accentVariant: 'emerald',
+      },
+      {
+        label: 'Tools & Frameworks',
+        icon: 'build',
+        summary: [
+          { text: 'Frameworks and platforms used to deliver responsive interfaces, APIs, and enterprise applications.' },
+        ],
+        items: [
+          { label: 'React', skillSlug: 'react' },
+          { label: 'Node.js' },
+          { label: '.NET', skillSlug: 'aspnet-core' },
+          { label: 'Spring Boot', skillSlug: 'spring-boot' },
+        ],
+        accentVariant: 'sky',
+      },
+      {
+        label: 'Team Delivery',
+        icon: 'groups',
+        summary: [
+          { text: 'Working effectively in shared repos, iterative delivery cycles, and cross-functional product teams.' },
+        ],
+        items: [{ label: 'Git' }, { label: 'Agile methodology' }],
+        accentVariant: 'violet',
+      },
+      {
+        label: 'Architecture Mindset',
+        icon: 'architecture',
+        summary: [
+          { text: 'Combining structured problem solving, design thinking, and system architecture basics into future-ready engineering growth.' },
+        ],
+        items: [
+          { label: 'Problem-solving' },
+          { label: 'Design thinking' },
+          { label: 'System architecture basics' },
+        ],
+        accentVariant: 'amber',
+      },
+    ],
+  },
+  codeSamples: [
+    {
+      id: 'portfolio-architect',
+      title: 'Architecting delivery',
+      language: 'TypeScript',
+      caption: 'A lightweight placeholder block for how I think about scalable product work.',
+      lines: [
+        {
+          tokens: [
+            { text: 'class', tone: 'keyword' },
+            { text: ' ' },
+            { text: 'PortfolioArchitect', tone: 'class' },
+            { text: ' {' },
+          ],
+        },
+        {
+          indent: 1,
+          tokens: [
+            { text: 'constructor', tone: 'keyword' },
+            { text: '() {' },
+          ],
+        },
+        {
+          indent: 2,
+          tokens: [
+            { text: 'this.mission = ' },
+            { text: '"Building scalable futures"', tone: 'string' },
+            { text: ';' },
+          ],
+        },
+        {
+          indent: 2,
+          tokens: [
+            { text: 'this.focus = [' },
+            { text: '"UX"', tone: 'string' },
+            { text: ', ' },
+            { text: '"Perf"', tone: 'string' },
+            { text: ', ' },
+            { text: '"Edge"', tone: 'string' },
+            { text: '];' },
+          ],
+        },
+        {
+          indent: 1,
+          tokens: [{ text: '}' }],
+        },
+        {
+          indent: 1,
+          tokens: [
+            { text: 'async', tone: 'keyword' },
+            { text: ' deployInnovation() {' },
+          ],
+        },
+        {
+          indent: 2,
+          tokens: [{ text: '// Logic optimized for human interaction', tone: 'comment' }],
+        },
+        {
+          indent: 2,
+          tokens: [
+            { text: 'await', tone: 'keyword' },
+            { text: ' ecosystem.analyze();' },
+          ],
+        },
+        {
+          indent: 2,
+          tokens: [
+            { text: 'return', tone: 'keyword' },
+            { text: ' this.craft(solution);' },
+          ],
+        },
+        {
+          indent: 1,
+          tokens: [{ text: '}' }],
+        },
+        {
+          tokens: [{ text: '}' }],
+        },
+      ],
+    },
+    {
+      id: 'tri-doan-java',
+      title: 'Knowledge page placeholder',
+      language: 'Java',
+      caption: 'A second block that hints at the future documentation pages behind each core skill.',
+      lines: [
+        {
+          tokens: [
+            { text: 'public class', tone: 'keyword' },
+            { text: ' ' },
+            { text: 'TriDoan', tone: 'class' },
+            { text: ' {' },
+          ],
+        },
+        {
+          indent: 1,
+          tokens: [
+            { text: 'private', tone: 'keyword' },
+            { text: ' List<Skill> stack = Arrays.asList(' },
+            { text: '"Spring"', tone: 'string' },
+            { text: ', ' },
+            { text: '"React"', tone: 'string' },
+            { text: ', ' },
+            { text: '"SQL"', tone: 'string' },
+            { text: ');' },
+          ],
+        },
+        { tokens: [{ text: '' }] },
+        {
+          indent: 1,
+          tokens: [
+            { text: 'public void', tone: 'keyword' },
+            { text: ' build() {' },
+          ],
+        },
+        {
+          indent: 2,
+          tokens: [{ text: 'stack.forEach(tech -> architecture.implement(tech));', tone: 'accent' }],
+        },
+        {
+          indent: 1,
+          tokens: [{ text: '}' }],
+        },
+        {
+          tokens: [{ text: '}' }],
+        },
+      ],
+    },
+  ],
+  skillRoutes: [
+    {
+      slug: 'java',
+      label: 'Java',
+      icon: 'coffee',
+      routeTitle: 'Java engineering notes',
+      placeholderSummary: [
+        { text: 'This page is reserved for future Java notes, patterns, and delivery stories.' },
+      ],
+      placeholderState: 'work_in_progress',
+      heroNote: [
+        { text: 'Planned content: ' },
+        { text: 'architecture notes, code patterns, and delivery lessons', accent: true },
+        { text: ' collected from product work.' },
+      ],
+      tags: ['Spring Boot', 'Testing', 'Architecture'],
+    },
+    {
+      slug: 'spring-boot',
+      label: 'Spring Boot',
+      icon: 'lan',
+      routeTitle: 'Spring Boot service playbook',
+      placeholderSummary: [
+        { text: 'A placeholder for API design notes, service structure decisions, and enterprise backend examples.' },
+      ],
+      placeholderState: 'work_in_progress',
+      heroNote: [
+        { text: 'This route will grow into a compact playbook for ' },
+        { text: 'service design and backend delivery', accent: true },
+        { text: '.' },
+      ],
+      tags: ['REST APIs', 'Security', 'Batch'],
+    },
+    {
+      slug: 'c-sharp',
+      label: 'C#',
+      icon: 'code',
+      routeTitle: 'C# delivery notes',
+      placeholderSummary: [
+        { text: 'A placeholder for future notes on enterprise app structure, async workflows, and practical patterns.' },
+      ],
+      placeholderState: 'work_in_progress',
+      heroNote: [
+        { text: 'Planned focus: ' },
+        { text: 'clean layering, client delivery, and maintainable application code', accent: true },
+        { text: '.' },
+      ],
+      tags: ['Async', 'Clean architecture', 'Testing'],
+    },
+    {
+      slug: 'aspnet-core',
+      label: 'ASP.NET Core',
+      icon: 'hub',
+      routeTitle: 'ASP.NET Core placeholder',
+      placeholderSummary: [
+        { text: 'Reserved for backend notes, endpoint design examples, and architecture-ready platform documentation.' },
+      ],
+      placeholderState: 'planned',
+      heroNote: [
+        { text: 'This space is intentionally left ready for ' },
+        { text: 'API, auth, and EF Core documentation', accent: true },
+        { text: '.' },
+      ],
+      tags: ['Web API', 'EF Core', 'Auth'],
+    },
+    {
+      slug: 'react',
+      label: 'React',
+      icon: 'deployed_code',
+      routeTitle: 'React implementation notes',
+      placeholderSummary: [
+        { text: 'A work-in-progress area for documenting frontend patterns, state handling, and interaction design tradeoffs.' },
+      ],
+      placeholderState: 'work_in_progress',
+      heroNote: [
+        { text: 'Planned content covers ' },
+        { text: 'component composition, state, and user experience patterns', accent: true },
+        { text: '.' },
+      ],
+      tags: ['Hooks', 'State', 'UX'],
+    },
+    {
+      slug: 'sql',
+      label: 'SQL',
+      icon: 'storage',
+      routeTitle: 'SQL and data modeling notes',
+      placeholderSummary: [
+        { text: 'Reserved for query tuning, schema design, and persistence-focused implementation notes.' },
+      ],
+      placeholderState: 'planned',
+      heroNote: [
+        { text: 'This placeholder is set aside for ' },
+        { text: 'data modeling, performance, and migration write-ups', accent: true },
+        { text: '.' },
+      ],
+      tags: ['Schema', 'Performance', 'Optimization'],
+    },
+  ],
+  projects: [
+    {
+      title: 'Manage Critical Document',
+      category: 'Healthcare workflow',
+      summary: [
+        { text: 'Enterprise document review flow for clinical-trial processes with strong validation, traceability, and release discipline.' },
+      ],
+      impact: [
+        { text: 'Supported feature investigation, sprint planning, release finalization, and ' },
+        { text: 'performance improvements', accent: true },
+        { text: ' across a business-critical document platform.' },
+      ],
+      stack: [
+        { label: 'Java', skillSlug: 'java' },
+        { label: 'Spring Boot', skillSlug: 'spring-boot' },
+        { label: 'MySQL', skillSlug: 'sql' },
+        { label: 'MongoDB' },
+        { label: 'Jenkins' },
+      ],
+      media: {
+        src: '/media/project-quantflow.jpg',
+        alt: 'Dark analytic interface placeholder for a featured enterprise software project.',
+      },
+      themeAccent: '#00d4ff',
+      icon: 'description',
+      focusNote: 'Focused on high-risk workflow quality, performance tuning, and reliable releases.',
+      status: 'featured',
+      featured: true,
+    },
+    {
+      title: 'Asset Management Platform',
+      category: 'Logistics tracking',
+      summary: [
+        { text: 'Multi-tenant tracking and logistics product for asset location, history, stock visibility, and operational alerts.' },
+      ],
+      impact: [
+        { text: 'Implemented features from ' },
+        { text: 'database to UI', accent: true },
+        { text: ' while helping evolve the platform toward more scalable service boundaries.' },
+      ],
+      stack: [
+        { label: 'Java', skillSlug: 'java' },
+        { label: 'Spring Boot', skillSlug: 'spring-boot' },
+        { label: 'React', skillSlug: 'react' },
+        { label: 'PostgreSQL', skillSlug: 'sql' },
+        { label: 'Docker' },
+      ],
+      media: {
+        src: '/media/project-signal.svg',
+        alt: 'Placeholder illustration for an asset management software project.',
+      },
+      themeAccent: '#80cbc4',
+      icon: 'inventory_2',
+      focusNote: 'Balanced operational complexity, product clarity, and scaling decisions.',
+      status: 'active',
+      featured: true,
+    },
+    {
+      title: 'GEO Web Applications',
+      category: 'GIS planning',
+      summary: [
+        { text: 'Map-based planning tools for cable routing, cost support, and connection management.' },
+      ],
+      impact: [
+        { text: 'Balanced requirement gathering, maintenance, UI work, and export features inside a technically dense product area.' },
+      ],
+      stack: [
+        { label: 'C#', skillSlug: 'c-sharp' },
+        { label: 'ASP.NET Core', skillSlug: 'aspnet-core' },
+        { label: 'React', skillSlug: 'react' },
+        { label: 'PostgreSQL', skillSlug: 'sql' },
+        { label: 'Entity Framework Core', skillSlug: 'aspnet-core' },
+      ],
+      media: {
+        src: '/media/workspace.jpg',
+        alt: 'Workspace placeholder image representing a geospatial software delivery environment.',
+      },
+      themeAccent: '#8be8d4',
+      icon: 'map',
+      focusNote: 'Supported feature depth in a domain with dense data and real operational constraints.',
+      status: 'active',
+    },
+    {
+      title: 'Architecture Case Studies',
+      category: 'Future feature',
+      summary: [
+        { text: 'Reserved cards for deeper architecture stories, tradeoff narratives, and decision walkthroughs.' },
+      ],
+      impact: [
+        { text: 'Planned to translate delivery experience into ' },
+        { text: 'solution-focused case studies', accent: true },
+        { text: ' once writing time opens up.' },
+      ],
+      stack: [{ label: 'System design' }, { label: 'ADR' }, { label: 'Scalability' }],
+      themeAccent: '#7f8fff',
+      icon: 'account_tree',
+      focusNote: 'Planned',
+      status: 'placeholder',
+    },
+    {
+      title: 'Knowledge Base Modules',
+      category: 'Future feature',
+      summary: [
+        { text: 'A future content layer for notes, diagrams, and implementation checklists per technology.' },
+      ],
+      impact: [
+        { text: 'This placeholder keeps room for ' },
+        { text: 'living technical documentation', accent: true },
+        { text: ' without redesigning the homepage later.' },
+      ],
+      stack: [{ label: 'Docs' }, { label: 'Examples' }, { label: 'Playbooks' }],
+      themeAccent: '#ffb264',
+      icon: 'auto_stories',
+      focusNote: 'Building next',
+      status: 'placeholder',
+    },
+  ],
+  education: {
+    eyebrow: 'Foundation',
+    title: [
+      { text: 'Academic grounding that supports ' },
+      { text: 'hands-on engineering', accent: true },
+      { text: '.' },
+    ],
+    description: [
+      { text: 'The portfolio keeps education compact but visible, framing it as the foundation behind continuous delivery and technical growth.' },
+    ],
+    school: 'Can Tho University',
+    degree: 'Bachelor of Engineering in Information Technology',
+    period: '2014 - 2023',
+    location: 'Can Tho, Vietnam',
+    gpa: '3.05',
+    summary: [
+      { text: 'Applied Informatics specialization focused on software engineering, programming techniques, system fundamentals, and the practical application of modern technologies in web development and digital solutions.' },
+    ],
+    image: {
+      src: '/media/workspace.jpg',
+      alt: 'Minimalist workspace placeholder used as a visual support image for education and foundation.',
+    },
+  },
+  contact: {
+    eyebrow: 'Contact',
+    title: [
+      { text: "Let's build the next " },
+      { text: 'reliable product system', accent: true },
+      { text: ' together.' },
+    ],
+    description: [
+      { text: 'This section stays intentionally simple: one strong CTA, one resume path, and enough context to reach out with confidence.' },
+    ],
+    supportLine: [
+      { text: 'Best fit: ' },
+      { text: 'full-stack delivery, backend-heavy products, and future architecture ownership', accent: true },
+      { text: '.' },
+    ],
+    primaryCta: { label: 'Email Me', href: 'mailto:w.dquoctri@gmail.com.vn' },
+    secondaryCta: {
+      label: 'Download Resume',
+      href: '/resume/DoanQuocTri-Software-Engineer-Jan-2024_2.docx',
+    },
+  },
+}
