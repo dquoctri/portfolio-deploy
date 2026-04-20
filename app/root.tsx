@@ -23,7 +23,7 @@ export function meta() {
 export function links() {
 	return [
 		{ rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-		{ rel: "alternate icon", href: "/favicon.ico" },
+		{ rel: "alternate icon", href: "/favicon.svg" },
 	];
 }
 

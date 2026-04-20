@@ -8,7 +8,7 @@ export const portfolioData: PortfolioData = {
     location: 'Ho Chi Minh City, Vietnam',
     email: 'w.d****tri@gmail.com.vn',
     phone: '+84 **** *563',
-    resumeHref: '/resume/DoanQuocTri-Software-Engineer-Jan-2024_2.docx',
+    resumeHref: '/resume/TriDoan-Software-Engineer-Jan-2024.docx',
     footerNote: '© 2026 Built with Codex precision.',
     socials: [
       { label: 'GitHub', href: 'https://github.com/w.d****tri' },
@@ -205,7 +205,7 @@ export const portfolioData: PortfolioData = {
     primaryCta: { label: 'View Portfolio', href: '#experience' },
     secondaryCta: {
       label: 'Download Resume',
-      href: '/resume/DoanQuocTri-Software-Engineer-Jan-2024_2.docx',
+      href: '/resume/TriDoan-Software-Engineer-Jan-2024.docx',
     },
     profileImage: {
       src: '/media/profile.png',
@@ -368,6 +368,7 @@ export const portfolioData: PortfolioData = {
         { label: 'xUnit' },
         { label: 'Git' },
         { label: 'Jira' },
+        { label: 'Slack' },
         { label: 'Confluence' },
       ],
     },
@@ -1029,10 +1030,10 @@ export const portfolioData: PortfolioData = {
       { text: 'full-stack delivery, backend-heavy products, and future architecture ownership', accent: true },
       { text: '.' },
     ],
-    primaryCta: { label: 'Email Me', href: 'mailto:w.dquoctri@gmail.com.vn' },
+    primaryCta: { label: 'Email Me', href: 'mailto:w.d***tri@gmail.com.vn' },
     secondaryCta: {
       label: 'Download Resume',
-      href: '/resume/DoanQuocTri-Software-Engineer-Jan-2024_2.docx',
+      href: '/resume/TriDoan-Software-Engineer-Jan-2024.docx',
     },
   },
 }
