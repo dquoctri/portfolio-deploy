@@ -1,7 +1,7 @@
 import { AnimatePresence, motion } from 'framer-motion'
 import { useEffect, useMemo, useRef, useState } from 'react'
+import { useLocation } from 'react-router'
 
-import { useRouter } from '../app/router'
 import { cn } from '../lib/cn'
 import type { SectionDefinition, SiteData } from '../types/portfolio'
 import { AppLink } from './AppLink'
@@ -14,7 +14,7 @@ interface HeaderProps {
 }
 
 export function Header({ site, sections }: HeaderProps) {
-  const { pathname } = useRouter()
+  const { pathname } = useLocation()
   const { navbarMode, navbarStyle } = useCustomization()
   const [isScrolled, setIsScrolled] = useState(false)
   const [isHiddenOnScroll, setIsHiddenOnScroll] = useState(false)

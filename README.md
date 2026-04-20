@@ -1,109 +1,133 @@
-# Welcome to React Router + Cloudflare Workers!
+# Portfolio Deploy
 
-[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/cloudflare/templates/tree/main/react-router-starter-template)
+React Router 7 portfolio app running on Cloudflare Workers with server-side rendering through the Cloudflare Vite plugin.
 
-![React Router Starter Template Preview](https://imagedelivery.net/wSMYJvS3Xw-n339CbDyDIA/bfdc2f85-e5c9-4c92-128b-3a6711249800/public)
+## Stack
 
-<!-- dash-content-start -->
+- React Router 7 framework mode
+- Cloudflare Workers
+- Vite 6
+- Tailwind CSS 4
+- TypeScript
+- Playwright + Vitest
 
-A modern, production-ready template for building full-stack React applications using [React Router](https://reactrouter.com/) and the [Cloudflare Vite plugin](https://developers.cloudflare.com/workers/vite-plugin/).
+## Local Development
 
-## Features
-
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
-- 🔎 Built-in Observability to monitor your Worker
-<!-- dash-content-end -->
-
-## Getting Started
-
-Outside of this repo, you can start a new project with this template using [C3](https://developers.cloudflare.com/pages/get-started/c3/) (the `create-cloudflare` CLI):
+Use the repo toolchain:
 
 ```bash
-npm create cloudflare@latest -- --template=cloudflare/templates/react-router-starter-template
+node -v
+npm -v
 ```
 
-A live public deployment of this template is available at [https://react-router-starter-template.templates.workers.dev](https://react-router-starter-template.templates.workers.dev)
+This project is pinned to `npm@10.9.2` in `package.json`.
 
-### Installation
-
-Install the dependencies:
+Install dependencies:
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+Start local development:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+Generate Cloudflare and route types:
 
-## Typegen
-
-Generate types for your Cloudflare bindings in `wrangler.json`:
-
-```sh
+```bash
 npm run typegen
 ```
 
-## Building for Production
+Run verification:
 
-Create a production build:
+```bash
+npm run typecheck
+npm test
+npm run e2e
+```
+
+## Production Build
+
+Create the Worker build locally:
 
 ```bash
 npm run build
 ```
 
-## Previewing the Production Build
+This generates:
 
-Preview the production build locally:
+- `build/client`
+- `build/server`
+
+## Deploy To Cloudflare
+
+### CLI Deploy
+
+1. Log in to Cloudflare:
 
 ```bash
-npm run preview
+npx wrangler login
 ```
 
-## Deployment
+2. Deploy the Worker:
 
-If you don't have a Cloudflare account, [create one here](https://dash.cloudflare.com/sign-up)! Go to your [Workers dashboard](https://dash.cloudflare.com/?to=%2F%3Aaccount%2Fworkers-and-pages) to see your [free custom Cloudflare Workers subdomain](https://developers.cloudflare.com/workers/configuration/routing/workers-dev/) on `*.workers.dev`.
-
-Once that's done, you can build your app:
-
-```sh
-npm run build
-```
-
-And deploy it:
-
-```sh
+```bash
 npm run deploy
 ```
 
-To deploy a preview URL:
+3. Optional preview version upload:
 
-```sh
+```bash
 npx wrangler versions upload
 ```
 
-You can then promote a version to production after verification or roll it out progressively.
+### Cloudflare Dashboard With Git
 
-```sh
-npx wrangler versions deploy
+This project should be deployed as a **Worker**, not a Pages static site.
+
+1. Push this repo to GitHub or GitLab.
+2. In Cloudflare, go to **Workers & Pages**.
+3. Select **Create application**.
+4. Select **Import a repository** under Workers.
+5. Choose this repository.
+6. Use the repo root as the root directory.
+7. Set the build command to:
+
+```bash
+npm run build
 ```
 
-## Styling
+8. Set the deploy command to:
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
+```bash
+npm run deploy
+```
 
----
+9. For preview builds on non-production branches, use:
 
-Built with ❤️ using React Router.
+```bash
+npx wrangler versions upload
+```
+
+10. Save and deploy.
+
+## Important Cloudflare Notes
+
+- The Worker name in the Cloudflare dashboard must match the `name` field in [wrangler.json](./wrangler.json).
+- In this repo that Worker name is `portfolio-deploy`.
+- If you connect this repo to Workers Builds, Cloudflare uses the Wrangler version from `package.json`.
+- If you rename the Worker in Cloudflare, update `wrangler.json` to match before the next build.
+
+## Useful Scripts
+
+```bash
+npm run dev
+npm run build
+npm run deploy
+npm run typegen
+npm run typecheck
+npm test
+npm run e2e
+```

@@ -1,23 +1,17 @@
-import { forwardRef, type AnchorHTMLAttributes, type MouseEvent } from 'react'
+import { forwardRef, type AnchorHTMLAttributes } from 'react'
+import { Link } from 'react-router'
 
-import { isInternalPath, isPlainLeftClick, useRouter } from '../app/router'
+function isRoutablePath(href: string, target?: string) {
+  return href.startsWith('/') && !href.startsWith('//') && !href.includes('#') && target !== '_blank'
+}
 
 export const AppLink = forwardRef<HTMLAnchorElement, AnchorHTMLAttributes<HTMLAnchorElement>>(
-  ({ href = '', onClick, target, ...props }, ref) => {
-    const { navigate } = useRouter()
-
-    const handleClick = (event: MouseEvent<HTMLAnchorElement>) => {
-      onClick?.(event)
-
-      if (!isInternalPath(href) || target === '_blank' || !isPlainLeftClick(event)) {
-        return
-      }
-
-      event.preventDefault()
-      navigate(href)
+  ({ href = '', target, ...props }, ref) => {
+    if (isRoutablePath(href, target)) {
+      return <Link ref={ref} to={href} target={target} {...props} />
     }
 
-    return <a ref={ref} href={href} onClick={handleClick} target={target} {...props} />
+    return <a ref={ref} href={href} target={target} {...props} />
   },
 )
 

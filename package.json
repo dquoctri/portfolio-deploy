@@ -1,35 +1,58 @@
 {
-  "name": "dqtri-portfolio",
+  "name": "portfolio-deploy",
+  "description": "Build a full-stack web application with React Router 7 on Cloudflare Workers.",
+  "cloudflare": {
+    "label": "React Router Portfolio",
+    "products": [
+      "Workers"
+    ],
+    "categories": [
+      "portfolio"
+    ],
+    "publish": true
+  },
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "packageManager": "npm@10.9.2",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "build": "react-router build",
+    "cf-typegen": "wrangler types && react-router typegen",
+    "typegen": "npm run cf-typegen",
+    "typecheck": "npm run cf-typegen && tsc -b",
+    "check": "npm run typecheck && npm run build && wrangler deploy --dry-run",
+    "deploy": "wrangler deploy",
+    "dev": "react-router dev",
+    "preview": "npm run build && vite preview",
     "test": "vitest run",
     "test:watch": "vitest",
     "e2e": "playwright test"
   },
+  "dependencies": {
+    "framer-motion": "^12.38.0",
+    "isbot": "5.1.32",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-router": "7.9.6"
+  },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "1.15.3",
     "@playwright/test": "^1.59.1",
-    "@tailwindcss/vite": "^4.2.2",
+    "@react-router/dev": "7.9.6",
+    "@tailwindcss/vite": "4.1.17",
     "@testing-library/jest-dom": "^6.9.1",
     "@testing-library/react": "^16.3.2",
     "@testing-library/user-event": "^14.6.1",
-    "@types/node": "^25.5.2",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^6.0.1",
+    "@cloudflare/workers-types": "4.20260420.1",
+    "@types/node": "24.10.1",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
     "jsdom": "^29.0.1",
-    "tailwindcss": "^4.2.2",
-    "typescript": "~5.9.3",
-    "vite": "^8.0.1",
-    "vitest": "^4.1.2"
-  },
-  "dependencies": {
-    "framer-motion": "^12.38.0",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "tailwindcss": "4.1.17",
+    "typescript": "5.9.3",
+    "vite": "^6.0.0",
+    "vite-tsconfig-paths": "5.1.4",
+    "vitest": "^4.1.2",
+    "wrangler": "4.83.0"
   }
 }

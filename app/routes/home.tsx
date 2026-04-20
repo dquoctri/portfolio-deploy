@@ -1,17 +1,16 @@
-import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
+import { PortfolioPage } from "../../src/features/portfolio/PortfolioPage";
 
-export function meta({}: Route.MetaArgs) {
+export function meta() {
 	return [
-		{ title: "New React Router App" },
-		{ name: "description", content: "Welcome to React Router!" },
+		{ title: "TRI DOAN | Senior Software Engineer" },
+		{
+			name: "description",
+			content:
+				"Explore Tri Doan's React Router portfolio covering backend depth, full-stack delivery, and future-facing solution architecture work.",
+		},
 	];
 }
 
-export function loader({ context }: Route.LoaderArgs) {
-	return { message: context.cloudflare.env.VALUE_FROM_CLOUDFLARE };
-}
-
-export default function Home({ loaderData }: Route.ComponentProps) {
-	return <Welcome message={loaderData.message} />;
+export default function Home() {
+	return <PortfolioPage />;
 }

@@ -1,9 +1,18 @@
-import { defineConfig } from 'vitest/config'
-import react from '@vitejs/plugin-react'
+/// <reference types="vitest/config" />
+
+import { cloudflare } from '@cloudflare/vite-plugin'
+import { reactRouter } from '@react-router/dev/vite'
 import tailwindcss from '@tailwindcss/vite'
+import { defineConfig } from 'vite'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react(), tailwindcss()],
+  plugins: [
+    cloudflare({ viteEnvironment: { name: 'ssr' } }),
+    tailwindcss(),
+    reactRouter(),
+    tsconfigPaths(),
+  ],
   test: {
     environment: 'jsdom',
     setupFiles: './src/test/setup.ts',
